@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Dashboard Pessoal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 font-sans text-gray-800">
+
+    <div class="flex h-screen overflow-hidden">
+        
+        <aside class="w-64 bg-indigo-900 text-white flex flex-col justify-between hidden md:flex">
+            <div>
+                <div class="p-5 text-2xl font-bold tracking-wider border-b border-indigo-800 flex items-center gap-3">
+                    <i class="fa-solid fa-chart-pie text-indigo-400"></i>
+                    <span>Meu Painel</span>
+                </div>
+                <nav class="mt-6 px-4 space-y-2">
+                    <a href="#" class="flex items-center gap-3 px-4 py-3 bg-indigo-800 text-white rounded-lg transition">
+                        <i class="fa-solid fa-house w-5"></i> Início
+                    </a>
+                    <a href="#" class="flex items-center gap-3 px-4 py-3 text-indigo-200 hover:bg-indigo-800 hover:text-white rounded-lg transition">
+                        <i class="fa-solid fa-list-check w-5"></i> Tarefas
+                    </a>
+                    <a href="#" class="flex items-center gap-3 px-4 py-3 text-indigo-200 hover:bg-indigo-800 hover:text-white rounded-lg transition">
+                        <i class="fa-solid fa-wallet w-5"></i> Finanças
+                    </a>
+                    <a href="#" class="flex items-center gap-3 px-4 py-3 text-indigo-200 hover:bg-indigo-800 hover:text-white rounded-lg transition">
+                        <i class="fa-solid fa-gears w-5"></i> Configurações
+                    </a>
+                </nav>
+            </div>
+            <div class="p-4 border-t border-indigo-800 flex items-center gap-3">
+                <div class="w-10 h-10 bg-indigo-500 rounded-full flex items-center justify-center font-bold text-lg">
+                    U
+                </div>
+                <div>
+                    <p class="text-sm font-semibold">Seu Nome</p>
+                    <p class="text-xs text-indigo-300">Premium</p>
+                </div>
+            </div>
+        </aside>
+
+        <main class="flex-1 flex flex-col overflow-y-auto">
+            
+            <header class="bg-white shadow-sm px-6 py-4 flex justify-between items-center">
+                <h1 class="text-xl font-bold text-gray-800 md:text-2xl">Bem-vindo de volta! 👋</h1>
+                <div class="flex items-center gap-4">
+                    <button class="relative p-2 text-gray-400 hover:text-gray-600 transition">
+                        <i class="fa-solid fa-bell text-xl"></i>
+                        <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+                    </button>
+                    <span id="current-date" class="text-sm text-gray-500 hidden sm:block"></span>
+                </div>
+            </header>
+
+            <section class="p-6 space-y-6">
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex items-center justify-between">
+                        <div>
+                            <p class="text-sm text-gray-500 font-medium uppercase tracking-wider">Tarefas de Hoje</p>
+                            <h3 class="text-3xl font-bold mt-1">4 / 7</h3>
+                        </div>
+                        <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-check-to-slot"></i>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex items-center justify-between">
+                        <div>
+                            <p class="text-sm text-gray-500 font-medium uppercase tracking-wider">Economia do Mês</p>
+                            <h3 class="text-3xl font-bold mt-1 text-green-600">R$ 1.250</h3>
+                        </div>
+                        <div class="w-12 h-12 bg-green-50 text-green-600 rounded-lg flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-money-bill-trend-up"></i>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex items-center justify-between sm:col-span-2 lg:col-span-1">
+                        <div>
+                            <p class="text-sm text-gray-500 font-medium uppercase tracking-wider">Ofensiva de Estudos</p>
+                            <h3 class="text-3xl font-bold mt-1">12 Dias</h3>
+                        </div>
+                        <div class="w-12 h-12 bg-orange-50 text-orange-500 rounded-lg flex items-center justify-center text-xl">
+                            <i class="fa-solid fa-fire"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 lg:col-span-2">
+                        <div class="flex justify-between items-center mb-4">
+                            <h2 class="text-lg font-bold text-gray-800">Principais Objetivos</h2>
+                            <button class="text-sm text-indigo-600 hover:underline font-semibold">+ Adicionar</button>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                                <div class="flex items-center gap-3">
+                                    <input type="checkbox" checked class="w-4 h-4 text-indigo-600 rounded border-gray-300 focus:ring-indigo-500">
+                                    <span class="line-through text-gray-400">Beber 2L de água</span>
+                                </div>
+                                <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Feito</span>
+                            </li>
+                            <li class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                                <div class="flex items-center gap-3">
+                                    <input type="checkbox" class="w-4 h-4 text-indigo-600 rounded border-gray-300 focus:ring-indigo-500">
+                                    <span class="text-gray-700 font-medium">Estudar HTML e CSS por 1 hora</span>
+                                </div>
+                                <span class="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded">Em andamento</span>
+                            </li>
+                            <li class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                                <div class="flex items-center gap-3">
+                                    <input type="checkbox" class="w-4 h-4 text-indigo-600 rounded border-gray-300 focus:ring-indigo-500">
+                                    <span class="text-gray-700 font-medium">Academia (Treino de peito)</span>
+                                </div>
+                                <span class="text-xs bg-orange-100 text-orange-800 px-2 py-1 rounded">Pendente</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                        <div>
+                            <h2 class="text-lg font-bold text-gray-800 mb-3">Notas Rápidas</h2>
+                            <textarea 
+                                class="w-full h-32 p-3 bg-yellow-50 text-yellow-900 border border-yellow-100 rounded-lg resize-none focus:outline-none focus:ring-1 focus:ring-yellow-300"
+                                placeholder="Digite um insight ou lembrete rápido aqui..."></textarea>
+                        </div>
+                        <p class="text-xs text-gray-400 mt-2 text-right">Salva automaticamente localmente.</p>
+                    </div>
+
+                </div>
+
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Atualiza a data no cabeçalho
+        const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('current-date').innerText = new Date().toLocaleDateString('pt-BR', dateOptions);
+    </script>
+</body>
+</html>
